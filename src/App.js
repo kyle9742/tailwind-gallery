@@ -4,7 +4,6 @@ import ImageSearch from "./components/ImageSearch";
 
 function App() {
   const [images, setImages] = useState([]);
-  const [isLoading, setIsLoding] = useState(true);
   const [term, setTerm] = useState("dog");
 
   useEffect(() => {
