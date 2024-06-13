@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const ImageSearch = () => {
+const ImageSearch = ({setTerm}) => {
     const [text, setText] = useState('');
     const onSubmit = e => {
         e.preventDefault();
-        setText(text);
-        console.log(text);
+        setTerm(text.trim().replace(' ', '+'));
+        
     }
   return (
     <div className="max-w-sm rounded overflow-hidden my-10 mx-auto">
